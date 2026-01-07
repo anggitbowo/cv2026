@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Anggit Wibowo Krisna</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-color: #1e3a8a; /* Biru Tua */
+      --secondary-color: #34495e; /* Abu-abu Gelap */
+      --background-color: #f4f7f9;
+      --text-color: #2c3e50;
+      --white-color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .cv-container {
+      display: flex;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: var(--white-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Sidebar Kiri */
+    .sidebar {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      padding: 30px;
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid var(--white-color);
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .sidebar .title {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #e0eafc;
+    }
+    
+    .sidebar-section {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .sidebar-section h3 {
+      font-size: 1.1rem;
+      border-bottom: 2px solid #e0eafc;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar-section li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar-section i {
+      margin-right: 12px;
+      width: 20px;
+      text-align: center;
+    }
+
+    /* Konten Utama (Kanan) */
+    .main-content {
+      padding: 40px;
+      width: 65%;
+    }
+
+    .main-section {
+      margin-bottom: 35px;
+    }
+
+    .main-section h2 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .main-section p {
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .timeline {
+      position: relative;
+    }
+    
+    .timeline-item {
+      padding-left: 25px;
+      border-left: 2px solid var(--primary-color);
+      padding-bottom: 20px;
+      position: relative;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      border: 2px solid var(--white-color);
+    }
+    
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      color: var(--secondary-color);
+      font-size: 0.9rem;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    .timeline-description {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .prestasi-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .prestasi-list li::before {
+      content: "🏆";
+      position: absolute;
+      left: -5px;
+      top: 0;
+    }
+    
+    .certificate-link a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    
+    .certificate-link a:hover {
+      background-color: #162d6f;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cv-container {
+        flex-direction: column;
+        margin: 20px;
+      }
+      .sidebar, .main-content {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <!-- Kolom Kiri (Sidebar) -->
+    <aside class="sidebar">
+      <img src="anggit.jpg" alt="Foto Anggit Wibowo Krisna" class="profile-img">
+      <h2>Anggit Wibowo Krisna</h2>
+      <p class="title">Siswa SMA / Atlet Futsal</p>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-user"></i> Data Pribadi</h3>
+        <ul>
+          <li><i class="fas fa-calendar-alt"></i> 20 Januari 2008</li>
+          <li><i class="fas fa-map-marker-alt"></i> Lampung Tengah</li>
+          <li><i class="fas fa-ruler-vertical"></i> 180 cm</li>
+          <li><i class="fas fa-weight-hanging"></i> 58 kg</li>
+          <li><i class="fas fa-hands-praying"></i> Islam</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-address-book"></i> Kontak</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 092181271398</li>
+          <li><i class="fas fa-envelope"></i> anggitbowo41@gmail.com</li>
+          <li><i class="fas fa-home"></i> Perumahan 2 PT Gunung Madu Plantation</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3><i class="fas fa-cogs"></i> Keahlian</h3>
+        <ul>
+          <li><i class="fas fa-users"></i> Kerja Sama Tim</li>
+          <li><i class="fas fa-shield-alt"></i> Disiplin & Komitmen</li>
+          <li><i class="fas fa-running"></i> Kebugaran Fisik</li>
+          <li><i class="fas fa-bullhorn"></i> Kepemimpinan</li>
+          <li><i class="fas fa-code"></i> Berjualan</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Kolom Kanan (Konten Utama) -->
+    <main class="main-content">
+      <section class="main-section">
+        <h2><i class="fas fa-id-card"></i> Profil Pribadi</h2>
+        <p>
+          Saya Anggit Wibowo Krisna, seorang pelajar SMA yang bersemangat, disiplin, dan memiliki motivasi tinggi untuk terus berkembang. Aktif dalam kegiatan olahraga dan seni, saya terbiasa bekerja dalam tim dan menghadapi tantangan dengan sikap positif. Saya memiliki komitmen kuat untuk memberikan yang terbaik dalam setiap tugas yang diemban dan bercita-cita untuk mengabdi kepada negara.
+        </p>
+      </section>
+
+      <section class="main-section">
+        <h2><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <p class="timeline-date">2023 - Sekarang</p>
+            <h3 class="timeline-title">SMA Gunung Madu</h3>
+            <p class="timeline-description">Jurusan Ilmu Pengetahuan Alam</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">2020 - 2023</p>
+            <h3 class="timeline-title">SMP Satya Dharma Sudjana</h3>
+            <p class="timeline-description">Aktif di ekstrakurikuler Futsal dan Band.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2><i class="fas fa-trophy"></i> Prestasi</h2>
+        <ul class="prestasi-list">
+          <li><strong>Juara 1 Futsal</strong> (3 kali) tingkat Antar Daerah.</li>
+          <li><strong>Juara 3 Futsal</strong> tingkat Pelajar SMP se-Provinsi Lampung.</li>
+        </ul>
+        <div class="certificate-link">
+          <a href="https://drive.google.com/file/d/1e1rnZC6UC_rZ9GtUVlAtTEtZ65oEzZB5/view?usp=drivesdk" target="_blank">
+            <i class="fas fa-link"></i> Lihat Sertifikat & Penghargaan
+          </a>
+        </div>
+      </section>
+      
+      <section class="main-section">
+          <h2><i class="fas fa-quote-left"></i> Motto Hidup</h2>
+          <p>
+            <i>"Setiap senyum adalah doa yang tak terdengar."</i>
+          </p>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
